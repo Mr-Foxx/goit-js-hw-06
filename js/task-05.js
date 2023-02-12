@@ -13,9 +13,17 @@ input.addEventListener('input',onInputText)
 // }
 
 
+// function onInputText(event) {
+//     output.textContent = event.currentTarget.value === " "
+//         ? 'Anonymous'
+//         : event.currentTarget.value
+
+// };
+
 function onInputText(event) {
-    output.textContent = event.currentTarget.value === " "
+    output.textContent = !event.currentTarget.value.trim() 
         ? 'Anonymous'
         : event.currentTarget.value
 
 };
+

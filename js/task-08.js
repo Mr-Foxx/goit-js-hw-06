@@ -8,8 +8,8 @@ form.addEventListener('submit',onFormSubmit);
 function onFormSubmit(event){
     event.preventDefault();
 
-    if (form.email.value === "" || form.password.value === "") {
-        alert('The fields must be filled!')
+    if (event.target.email.value.trim() === "" || event.target.password.value === "") {
+       return alert('The fields must be filled!')
     };
 
     const formElement = event.currentTarget.elements;
@@ -20,7 +20,7 @@ function onFormSubmit(event){
     const data = { email, password };
     console.log(data);
 
-    form.reset()
+    event.target.reset()
 }
 
 
